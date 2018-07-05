@@ -1,6 +1,7 @@
 ﻿# Учебный проект Барбершоп «Бородинский»
 
 Студент: Andreas Just.
+
 Наставник: Andreas Just.
 
 
@@ -20,4 +21,5 @@
 
 ##
 ![enter image description here](https://lh3.googleusercontent.com/90mizUVnFFlEye-MOewgvH8z_BzuPoBRFuuwGY21Sdesxtw0uPDpbutukSkIXhzkJwECVT-PaQixDynqVptE-OXDqkovpJahfQea=w600-h102-rw-no)
+
 Репозиторий создан для самообучения по интенсивному онлайн‑курсу [«Продвинутый HTML и CSS»](https://htmlacademy.ru/intensive/adaptive) от [HTML Academy](https://htmlacademy.ru/).
