@@ -1,0 +1,11 @@
+.subject {
+
+	&--btn {
+		display: none;
+	}
+}
+
+.subject__title {
+	@include title-mobile();
+	margin-bottom: 30px;
+}

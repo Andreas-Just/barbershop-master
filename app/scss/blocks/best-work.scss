@@ -1,0 +1,33 @@
+.best-work {
+	position: relative;
+
+	font-size: 20px;
+	text-transform: uppercase;
+	text-align: center;
+	color: $white;
+}
+
+.best-work__label {
+	position: absolute;
+	bottom: 30px;
+	left: 0;
+	padding: 12px 20px;
+
+	background-color: $bg-brown;
+
+	&::after {
+		content: "";
+	  position: absolute;
+	  width: 20px;
+	  height: 100%;
+	  right: -10px;
+	  bottom: 0px;
+	  z-index: 10;
+	  background-image: 
+		  linear-gradient(to right bottom, $bg-brown 49%, transparent 50%), 
+		  linear-gradient(to right top, $bg-brown 49%, transparent 50%);
+	  background-repeat: no-repeat;
+	  background-position: 0 0, 0 0;
+	  background-size: 100% 100%;
+	}
+}

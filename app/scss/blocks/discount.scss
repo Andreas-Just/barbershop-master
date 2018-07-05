@@ -1,0 +1,20 @@
+.discount {
+	display: flex;
+
+	border: 1px solid $btn-dark;
+}
+
+.discount__icon {
+	width: 58px;
+	height: 57px;
+	margin: 18px 35px 18px 20px;
+}
+
+.discount__text {
+	align-self: center;
+	margin: 0;
+	max-width: 166px;
+
+	font-size: 20px;
+	text-align: left;
+}

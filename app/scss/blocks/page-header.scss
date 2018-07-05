@@ -1,0 +1,21 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+
+  background-color: #242424;
+}
+
+.page-header--inner {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.page-header__logo {
+	height: 85px;
+  text-align: center;
+
+  img {
+  	width: 226px;
+	  height: 85px;
+  }
+}

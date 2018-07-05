@@ -1,0 +1,52 @@
+.site-list__item {
+  font-weight: bold;
+
+  a {
+    position: relative;
+
+    display: block;
+    padding: 12px 21px;
+    padding-bottom: 13px;
+
+    font-size: 18px;
+    line-height: 24px;
+    color: $white;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    background-color: $bg-brown;
+    border-top: 1px solid #886e5b;
+    border-bottom: 1px solid #71543f;
+
+    &[href]:hover {
+      background-color: #755a46;
+      border-top-color: #755a46;
+
+      .site-list__icon-comb {
+        color: rgba($white, 0.65);
+      }
+    }
+
+    &[href]:active {
+      color: rgba(255, 255, 255, 0.3);
+      background-color: $nav-brown;
+      border-top-color: $nav-brown;
+
+      .site-list__icon-comb {
+        color: rgba($white, 0.15);
+      }
+    }
+  }
+}
+
+.site-list__icon-comb {
+  position: absolute;
+  top: 15px;
+  left: auto;
+  right: 15px;
+
+  width: 16px;
+  height: 16px;
+
+  color: $btn-dark-clr;
+}

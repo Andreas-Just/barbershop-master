@@ -1,0 +1,47 @@
+.user-list__item {
+  font-weight: bold;
+}
+
+.user-list__login {
+  position: relative;
+
+  display: block;
+  padding: 17px 21px;
+  padding-left: 49px;
+
+  line-height: 18px;
+  color: $white;
+  text-decoration: none;
+
+  &:hover {
+    color: $white;
+    text-decoration: none;
+    background-color: #755a46;
+    border-top-color: #755a46;
+
+    .user-list__login-icon {
+      color: rgba($white, 0.65);
+    }
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: $nav-brown;
+    border-top-color: $nav-brown;
+
+    .user-list__login-icon {
+      color: rgba($white, 0.15);
+    }
+  }
+}
+
+.user-list__login-icon {
+  position: absolute;
+  top: 17px;
+  left: 21px;
+
+  width: 16px;
+  height: 16px;
+
+  color: $btn-dark-clr;
+}

@@ -1,0 +1,23 @@
+.page-footer {
+	width: 320px;
+  margin: 0 auto;
+  padding-top: 33px;
+  padding-bottom: 25px;
+
+	background-color: $bg-darkgrey;
+	border-top: 1px solid  $btn-dark-bd;
+	border-bottom: 1px solid  $btn-dark-bd;
+}
+
+.page-footer__contacts {
+	@include content-padding;
+	margin-bottom: 25px;
+}
+
+.page-footer__social {
+	margin-bottom: 30px;
+}
+
+.page-footer__copyright {
+	@include content-padding;
+}

@@ -1,0 +1,13 @@
+.copyright {
+	text-align: center;
+}
+
+.copyright__text {
+	display: block;
+	margin-bottom: 14px;
+	font-weight: normal;
+}
+
+.copyright__link {
+	@include button($white, $btn-dark-bd, $white, #545454, $btn-dark-clr, $btn-dark-bg, transparent, transparent, $btn-dark-bg);
+}

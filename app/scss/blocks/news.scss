@@ -1,0 +1,112 @@
+.news {
+	@include content-padding;
+	width: 320px;
+  margin: 0 auto;
+  padding-top: 35px;
+
+	color: $black;
+	background-color: $bg-lightgrey;
+	border-bottom: 1px solid $btn-light-bd;
+}
+
+.news__title {
+	@include title-mobile();
+	margin-bottom: 12px;
+}
+
+.news__list {
+	@include list-reset();
+}
+
+.news__item {
+	position: relative;
+	display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+
+	&:first-child {
+		border-bottom: 1px solid $btn-light-bd;
+	}
+
+	&:nth-child(n+3) {
+		display: none;
+	}
+
+	&:hover {
+		.news__date {
+	  	background-color: $bg-brown;
+		}
+		.news__date::after {
+	  	border-color: $bg-brown transparent transparent transparent;
+		}
+		.news__text {
+      color: $bg-brown;
+      text-decoration: underline;
+    }
+  }
+
+  &:active {
+  	.news__date {
+	  	color: rgba($white, 0.3);
+	    background-color: $nav-brown;
+		}
+		.news__date::after {
+	  	border-color: $nav-brown transparent transparent transparent;
+	  }
+		.news__day {
+    	color: rgba($white, 0.3);
+    }
+    .news__text {
+      color: $nav-brown;
+    }
+  }
+}
+
+.news__date {
+	position: absolute;
+	top: 28px;
+	left: 0;
+	padding-top: 5px;
+	padding-bottom: 10px;
+	width: 50px;
+	height: 50px;
+
+	font-size: 16px;
+	line-height: 30px;
+	text-align: center;
+
+	color: $white;
+	background-color: $black;
+
+	&::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 25px 0 25px;
+    border-color: $black transparent transparent transparent;
+  }
+
+  span {
+  	display: block;
+  	margin-top: -10px;
+  }
+}
+
+.news__day {
+	@include title-mobile($white);
+	display: block;
+}
+
+.news__text {
+	width: 212px;
+	margin: 18px 0 22px auto;
+}
+
+.news__to-all {
+	@include button($black, $btn-light-bd, $black, $btn-light-bg, $btn-light-clr, $btn-light-bg);
+	margin-bottom: 28px;
+}

@@ -1,0 +1,225 @@
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+.modal {
+    position: fixed;
+    display: none;
+
+    color: $black;
+    background-color: $bg-lightgrey;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+.modal-show {
+    display: block;
+
+    animation: bounce 0.6s;
+}
+
+.modal-error {
+    animation: shake 0.6s;
+}
+
+.modal--login {
+    top: 85px;
+    left: 50%;
+    z-index: 10;
+
+    width: 320px;
+    margin-left: -160px;
+    @include content-padding;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.modal__title {
+    @include title-mobile();
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.modal__text {
+    margin: 0;
+    margin-bottom: 20px;
+
+    text-align: center;
+}
+
+.modal__inner {
+    margin-bottom: 7px;
+
+    &--help {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 25px;
+        margin-bottom: 30px;
+    }
+}
+
+.modal__input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px 20px;
+    padding-right: 40px;
+
+    font: inherit;
+    font-size: 16px;
+    color: $black;
+    text-transform: none;
+    border: 1px solid $btn-light-bd;
+    outline: none;
+
+    &--user {
+        background-image: url('../img/icon-user.svg');
+        background-repeat: no-repeat;
+        background-position: 250px center;
+        background-size: 15px 15px;
+    }
+
+    &--password {
+        background-image: url('../img/icon-lock.svg');
+        background-repeat: no-repeat;
+        background-position: 250px center;
+        background-size: 15px 15px;
+    }
+
+    &:hover {
+        border-color: $btn-light-bg;
+    }
+
+    &:focus {
+        border-color: #999999;
+    }
+
+    &::placeholder {
+        color: $black;
+        text-transform: uppercase;
+    }
+}
+
+.modal__label--checkbox {
+    position: relative;
+    margin: 0;
+    padding-left: 50px;
+    cursor: pointer;
+
+    &:hover {
+        color: $bg-brown;
+        text-decoration: underline;
+    }
+    &:active {
+        color: $nav-brown;
+        text-decoration: none;
+    }
+
+    &::before {
+        position: absolute;
+        top: -3px;
+        left: 0;
+        width: 36px;
+        height: 36px;
+
+        border: 1px solid $btn-light-bd;
+        background-color: $white;
+
+        content: "";
+    }
+
+    &:hover::before {
+        border-color: $btn-light-bg;
+    }
+
+    &:active::before {
+        @include checkbox-checked;
+        background-color: $btn-light-bg;
+    }
+}
+
+.modal__input--checkbox:checked + .modal__label--checkbox {
+
+    &::before {
+        @include checkbox-checked;
+        background-color: $white;
+    }
+
+    &:active::before {
+        background-color: $btn-light-bg;
+        background-image: none;
+        box-shadow: none;
+    }
+}
+
+.modal__restore {
+    display: block;
+    color: $black;
+    text-decoration: underline;
+
+    &:hover {
+        color: $bg-brown;
+        text-decoration: none;
+    }
+
+    &:active {
+        color: $nav-brown;
+        text-decoration: underline;
+    }
+}
+
+.modal__button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal__submit {
+    @include button($white, $bg-brown, $white, $nav-brown, $btn-dark-clr, $nav-brown, $bg-brown, $nav-brown);
+    width: 49%;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.modal__close {
+    @include button($black, $btn-light-bd, $black, $btn-light-bg, $btn-light-clr, $btn-light-bg);
+    width: 49%;
+
+    &:focus {
+        outline: none;
+    }
+}

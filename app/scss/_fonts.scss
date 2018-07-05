@@ -1,0 +1,4 @@
+@import "_mixins/font-face";
+
+@include font-face("ptsansnarrow", "../fonts/PTSansNarrowRegular/PTSansNarrow");
+@include font-face("ptsansnarrow", "../fonts/PTSansNarrowBold/PTSansNarrowBold", bold);
