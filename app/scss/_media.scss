@@ -826,61 +826,70 @@
 	}
 
 	.modal--login {
-		top: 150px;
-		width: 520px;
-		margin-left: -260px;
-		padding-top: 60px;
-    padding-bottom: 70px;
+		top: 130px;
+		width: 460px;
+		margin-left: -230px;
+		padding: 55px 70px 57px;
 	}
 	.modal__title {
     @include title-tablet();
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     text-align: center;
 	}
 	.modal__text {
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 
-    font-size: 20px;
+    &--failure,
+    &--success {
+        margin-bottom: 34px;
+    }
 	}
 	.modal__inner {
-    margin-bottom: 20px;
 
     &--help {
-      margin-top: 40px;
-      margin-bottom: 45px;
-	    font-size: 20px;
+      margin-top: 29px;
+      margin-bottom: 39px;
     }
 	}
 	.modal__input {
 		padding: 20px 25px;
 		padding-right: 50px;
-		font-size: 20px;
+		font-size: 24px;
 
 		&--user {
-        background-position: 350px center;
+        background-position: 275px center;
         background-size: 19px 19px;
     }
 
     &--password {
-        background-position: 350px center;
+        background-position: 275px center;
         background-size: 19px 19px;
     }
 	}
-	.modal__label--checkbox {
-		padding-left: 60px;
-	}
 	.modal__submit {
-		padding: 22px;
+		padding: 14px;
 		width: 100%;
 		
 		font-size: 20px;
+
+		&--office {
+        display: inline-block;
+    }
+
+    &--failure {
+        width: 148px;
+    }
+
+    &--success {
+        width: 320px;
+    }
 	}
 	.modal__close {
     position: absolute;
-    top: 5px;
-    right: -40px;
-    width: 22px;
-    height: 22px;
+    top: 75px;
+    right: -110px;
+    width: 40px;
+    height: 40px;
 
     font-size: 0;
     border: 0;
@@ -891,7 +900,7 @@
     &::before,
     &::after {
         position: absolute;
-        top: 10px;
+        top: 19px;
         left: 2px;
         width: 35px;
         height: 2px;
@@ -907,6 +916,10 @@
     &::after {
         transform: rotate(-45deg);
     }
+	}
+	.modal--success {
+		width: 460px;
+		margin-left: -230px;
 	}
 
 }
@@ -1408,13 +1421,17 @@
     top: 100px;
     width: 880px;
     margin-left: -440px;
-    padding: 0 85px;
-    padding-top: 65px;
-    padding-bottom: 80px;
+    padding-top: 60px;
+    padding-bottom: 65px;
   }
   .modal__title {
   	margin-bottom: 30px;
     text-align: left;
+
+    &--failure,
+    &--success {
+      text-align: center;
+    }
   }
   .modal__text {
     margin-bottom: 40px;
@@ -1422,6 +1439,11 @@
     font-size: 24px;
     line-height: 30px;
     text-align: left;
+
+    &--failure,
+    &--success {
+      text-align: center;
+    }
   }
   .modal__box {
 		display: flex;
@@ -1439,31 +1461,35 @@
   .modal__input {
     padding: 20px 25px;
     padding-right: 50px;
-    font-size: 22px;
+    font-size: 28px;
 
     &--user {
-        background-position: 295px center;
+        background-position: 310px center;
         background-size: 22px 22px;
     }
 
     &--password {
-        background-position: 270px center;
+        background-position: 310px center;
         background-size: 22px 22px;
     }
   }
   .modal__submit {
     width: 48%;
-    padding: 20px;
     
     font-size: 24px;
     line-height: 30px;
+
+    &--failure,
+    &--success {
+      width: 100%;
+    }
   }
   .modal__close {
   	@include button($black, $btn-light-bd, $black, $btn-light-bg, $btn-light-clr, $btn-light-bg);
   	position: static;
     width: 48%;
     height: auto;
-  	padding: 20px;
+  	padding: 18px;
 
   	font-size: 24px;
     line-height: 30px;
@@ -1472,6 +1498,16 @@
     &::after {
     	display: none;
     }
+  }
+  .modal--failure {
+  	width: 380px;
+  	margin-left: -190px;
+  	padding: 70px;
+  }
+  .modal--success {
+  	width: 520px;
+  	margin-left: -260px;
+  	padding: 70px;
   }
 	
 }

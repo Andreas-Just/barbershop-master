@@ -56,50 +56,54 @@
 }
 
 .modal--login {
-    top: 85px;
+    top: 136px;
     left: 50%;
     z-index: 10;
 
     width: 320px;
     margin-left: -160px;
     @include content-padding;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 33px;
+    padding-bottom: 37px;
 }
 
 .modal__title {
     @include title-mobile();
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .modal__text {
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 
     text-align: center;
+
+    &--failure,
+    &--success {
+        margin-bottom: 34px;
+    }
 }
 
 .modal__inner {
-    margin-bottom: 7px;
+    margin-bottom: 6px;
 
     &--help {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        margin-top: 25px;
-        margin-bottom: 30px;
+        margin-top: 30px;
+        margin-bottom: 33px;
     }
 }
 
 .modal__input {
     box-sizing: border-box;
     width: 100%;
-    padding: 12px 20px;
-    padding-right: 40px;
+    padding: 10px 45px 13px 20px;
 
     font: inherit;
-    font-size: 16px;
+    line-height: 30px;
     color: $black;
     text-transform: none;
     border: 1px solid $btn-light-bd;
@@ -108,15 +112,15 @@
     &--user {
         background-image: url('../img/icon-user.svg');
         background-repeat: no-repeat;
-        background-position: 250px center;
-        background-size: 15px 15px;
+        background-position: 245px center;
+        background-size: 16px 16px;
     }
 
     &--password {
         background-image: url('../img/icon-lock.svg');
         background-repeat: no-repeat;
-        background-position: 250px center;
-        background-size: 15px 15px;
+        background-position: 245px center;
+        background-size: 16px 16px;
     }
 
     &:hover {
@@ -129,7 +133,6 @@
 
     &::placeholder {
         color: $black;
-        text-transform: uppercase;
     }
 }
 
@@ -150,10 +153,10 @@
 
     &::before {
         position: absolute;
-        top: -3px;
+        top: -2px;
         left: 0;
-        width: 36px;
-        height: 36px;
+        width: 33px;
+        height: 33px;
 
         border: 1px solid $btn-light-bd;
         background-color: $white;
@@ -208,18 +211,52 @@
 
 .modal__submit {
     @include button($white, $bg-brown, $white, $nav-brown, $btn-dark-clr, $nav-brown, $bg-brown, $nav-brown);
-    width: 49%;
+    width: 130px;
+
+    &--office {
+        display: none;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &--failure,
+    &--success {
+        width: 180px;
+        margin: auto;
+    }
+}
+
+.modal__close {
+    @include button($black, $btn-light-bd, $black, $btn-light-bg, $btn-light-clr, $btn-light-bg);
+    width: 130px;
 
     &:focus {
         outline: none;
     }
 }
 
-.modal__close {
-    @include button($black, $btn-light-bd, $black, $btn-light-bg, $btn-light-clr, $btn-light-bg);
-    width: 49%;
+.modal--failure {
+    // display: block;
+    top: 10%;
+    left: 50%;
+    z-index: 10;
 
-    &:focus {
-        outline: none;
-    }
+    width: 320px;
+    margin-left: -160px;
+    padding-top: 55px;
+    padding-bottom: 47px;
+}
+
+.modal--success {
+    // display: block;
+    top: 30%;
+    left: 50%;
+    z-index: 10;
+
+    width: 320px;
+    margin-left: -160px;
+    padding-top: 55px;
+    padding-bottom: 47px;
 }
