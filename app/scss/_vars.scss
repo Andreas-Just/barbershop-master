@@ -1,4 +1,5 @@
 $font: "ptsansnarrow", "Arial", sans-serif;
+
 // ————————COLORS———————— //
 $black: #000000;
 $white: #ffffff;
@@ -16,7 +17,6 @@ $btn-dark: rgba($white, 0.1);
 $btn-dark-bd: #3f3f3f;
 $btn-dark-bg: #252525;
 $btn-dark-clr: rgba($white, 0.3);
-
 // —————————————————————— //
 
 // ————————WIDTHS———————— //
@@ -29,17 +29,7 @@ $padding-tablet: 64px;
 $padding-desktop: 120px;
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
-
-
-
-
-
-
-
-
-
-
-
+// —————————————————————— //
 
 // Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
 $grid-gutter-width: 30px;
